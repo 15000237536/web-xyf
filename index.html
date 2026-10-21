@@ -8,9 +8,9 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <a class="skip-link" href="#main">跳到主要内容</a>
+  <a class="skip-link" href="#home">跳到主要内容</a>
 
-  <nav class="nav" id="site-nav">
+  <nav class="nav is-dark" id="site-nav">
     <div class="nav__inner">
       <a class="nav__brand" href="index.html">熊英菲</a>
       <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="打开菜单">
@@ -26,6 +26,32 @@
       </ul>
     </div>
   </nav>
+
+  <!-- 欢迎页 / 首屏 landing -->
+  <section class="landing" id="welcome" aria-label="欢迎页">
+    <div class="landing__image" role="img" aria-label="拼贴风格头像插画"></div>
+    <div class="landing__overlay"></div>
+
+    <div class="landing__content">
+      <p class="landing__line landing__line--1">Sometimes you must question</p>
+      <p class="landing__line landing__line--2">semi-colon ;</p>
+      <p class="landing__line landing__line--3">love yourself</p>
+
+      <a class="landing__enter" href="#home" aria-label="进入主页">
+        <span class="landing__enter-ring"></span>
+        <span class="landing__enter-eye">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <circle cx="32" cy="32" r="28" fill="none" stroke="currentColor" stroke-width="3"/>
+            <ellipse cx="32" cy="32" rx="14" ry="22" fill="currentColor"/>
+            <circle cx="32" cy="32" r="7" fill="#0b1d4b"/>
+          </svg>
+        </span>
+        <span class="landing__enter-text">进入</span>
+      </a>
+
+      <p class="landing__hint">view the details, not in the piece</p>
+    </div>
+  </section>
 
   <main id="main">
     <!-- 首屏 -->
@@ -52,10 +78,6 @@
         <p>
           我就读于数据科学专业，平时用 HTML 和 CSS 做一些小页面，
           把学到的东西和喜欢的内容记录下来。
-        </p>
-        <p>
-          我相信理解一件事的最好方式，是先把它讲清楚。
-          这个站点就是我练习「讲清楚」的地方。
         </p>
         <ul class="tags">
           <li>阅读</li>
