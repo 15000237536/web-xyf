@@ -1,59 +1,191 @@
 <!DOCTYPE html>
 <html>
 <head>
- <meta charset="UTF-8">
- <title>我的主页</title>
- <link rel="stylesheet" type="text/css" href="css/style.css">
+    <meta charset="UTF-8">
+    <title>我的主页</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-  <nav class="nav">
-    <a href="#home">首页</a>
-    <a href="#about">关于我</a>
-    <a href="#works">我的作品</a>
-    <a href="#contact">联系我</a>
-  </nav>
-  <main>
-    <header id="home">
-      <h1>你好，我是熊英菲</h1>
-    </header>
-    <section class="profile flex" id="about">
-      <div class="avatar">
-        <img src="images/test2.jpg">
-      </div>
-    </header>
-    <section>
-      <div>
-        <p>这是我的作品</p>
-      </div>
-    </section>
-<h2 id="works">我的作品</h2>
-<div class="works flex">
-  <div class="card">
-    <h3>个人主页</h3>
-    <p>记录我的兴趣和学习经历</p>
-    <a href="project1.html">查看个人主页</a>
-  </div>
-  <div class="card">
-    <h3>项目作品</h3>
-    <p>展示我的项目经验和技能</p>
-    <a href="project2.html">查看项目作品</a>
-  </div>
-</div>
+    <nav class="nav flex">
+        <a href=" ">首页</a >
+        <a href="#about">关于我</a >
+        <a href="#works">我的作品</a >
+        <a href="#contact">联系我</a >
+    </nav>
+    <main>
+        <header id="home">
+            <h1>你好，我是熊英菲</h1>
+        </header>
+        <section class="profile flex" id="about">
+            <div class="avatar">
+                < img src="images/test2.jpg">
+            </div>
+            <section>
+                <div>
+                </div>
+            </section>
+        </section>
+        <h2 id="works">我的作品</h2>
+        <div class="works flex">
+            <div class="card">
+                <h3>个人主页</h3>
+                <p>记录我的兴趣和学习经历</p >
+                <a href="project1.html">查看个人主页</a >
+            </div>
+            <div class="card">
+                <h3>项目作品</h3>
+                <p>展示我的项目经验和技能</p >
+                <a href="project2.html">查看项目作品</a >
+            </div>
+        </div>
+        <section class="details">
+            <h2>作品详情</h2>
+            <h3 id="project-1">个人主页</h3>
+            <p>用 HTML 组织个人爱好，用 CSS 设置颜色和布局。</p >
+            <h3 id="project-2">信息收集平台</h3>
+            <p>将微信群中的待办事项事项整理且分类 方便大学生赶ddl以及查阅资料</p >
+        </section>
+        <section class="contact" id="contact">
+            <h2>联系我</h2>
+            <p>欢迎交流网页设计和学科专业知识。</p >
+            <p>邮箱：
+                <a href="mailto:xiongyingfei@163.com">xiongyingfei@163.com</a >
+            </p >
+        </section>
+    </main>
 
-    <section class="details">
-      <h2>作品详情</h2>
-      <h3 id="project-1">个人主页</h3>
-      <p>用 HTML 组织个人爱好，用 CSS 设置颜色和布局。</p>
-      <h3 id="project-2">信息收集平台</h3>
-      <p>将微信群中的待办事项事项整理且分类 方便大学生赶ddl以及查阅资料</p>
-    </section>
+<!-- Code injected by live-server -->
+<script>
+// <![CDATA[  <-- For SVG support
+if ('WebSocket' in window) {
+	(function () {
+		function refreshCSS() {
+			var sheets = [].slice.call(document.getElementsByTagName("link"));
+			var head = document.getElementsByTagName("head")[0];
+			for (var i = 0; i < sheets.length; ++i) {
+				var elem = sheets[i];
+				var parent = elem.parentElement || head;
+				parent.removeChild(elem);
+				var rel = elem.rel;
+				if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+					var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+					elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+				}
+				parent.appendChild(elem);
+			}
+		}
+		var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+		var address = protocol + window.location.host + window.location.pathname;
+		var socket = new WebSocket(address);
+		socket.onmessage = function (msg) {
+			if (msg.data == 'reload') window.location.reload();
+			else if (msg.data == 'refreshcss') refreshCSS();
+		};
+		if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+			console.log('Live reload enabled.');
+			sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+		}
+	})();
+}
+else {
+	console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+}
+// ]]>
+</script>
+</body>
+</html><!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>我的主页</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <nav class="nav flex">
+        <a href=" ">首页</a >
+        <a href="#about">关于我</a >
+        <a href="#works">我的作品</a >
+        <a href="#contact">联系我</a >
+    </nav>
+    <main>
+        <header id="home">
+            <h1>你好，我是熊英菲</h1>
+        </header>
+        <section class="profile flex" id="about">
+            <div class="avatar">
+                < img src="images/test2.jpg">
+            </div>
+            <section>
+                <div>
+                </div>
+            </section>
+        </section>
+        <h2 id="works">我的作品</h2>
+        <div class="works flex">
+            <div class="card">
+                <h3>个人主页</h3>
+                <p>记录我的兴趣和学习经历</p >
+                <a href="project1.html">查看个人主页</a >
+            </div>
+            <div class="card">
+                <h3>项目作品</h3>
+                <p>展示我的项目经验和技能</p >
+                <a href="project2.html">查看项目作品</a >
+            </div>
+        </div>
+        <section class="details">
+            <h2>作品详情</h2>
+            <h3 id="project-1">个人主页</h3>
+            <p>用 HTML 组织个人爱好，用 CSS 设置颜色和布局。</p >
+            <h3 id="project-2">信息收集平台</h3>
+            <p>将微信群中的待办事项事项整理且分类 方便大学生赶ddl以及查阅资料</p >
+        </section>
+        <section class="contact" id="contact">
+            <h2>联系我</h2>
+            <p>欢迎交流网页设计和学科专业知识。</p >
+            <p>邮箱：
+                <a href="mailto:xiongyingfei@163.com">xiongyingfei@163.com</a >
+            </p >
+        </section>
+    </main>
 
-<section class="contact" id="contact">
-      <h2>联系我</h2>
-      <p>欢迎交流网页设计和学科专业知识。</p>
-      <p>邮箱：<a href="xiongyingfei@163.com">xiongyingfei@163.com</a></p>
-    </section>
-</section>
-</main>
+<!-- Code injected by live-server -->
+<script>
+// <![CDATA[  <-- For SVG support
+if ('WebSocket' in window) {
+	(function () {
+		function refreshCSS() {
+			var sheets = [].slice.call(document.getElementsByTagName("link"));
+			var head = document.getElementsByTagName("head")[0];
+			for (var i = 0; i < sheets.length; ++i) {
+				var elem = sheets[i];
+				var parent = elem.parentElement || head;
+				parent.removeChild(elem);
+				var rel = elem.rel;
+				if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+					var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+					elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+				}
+				parent.appendChild(elem);
+			}
+		}
+		var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+		var address = protocol + window.location.host + window.location.pathname;
+		var socket = new WebSocket(address);
+		socket.onmessage = function (msg) {
+			if (msg.data == 'reload') window.location.reload();
+			else if (msg.data == 'refreshcss') refreshCSS();
+		};
+		if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+			console.log('Live reload enabled.');
+			sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+		}
+	})();
+}
+else {
+	console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+}
+// ]]>
+</script>
 </body>
 </html>
