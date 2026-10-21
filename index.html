@@ -10,10 +10,15 @@
 <body>
   <a class="skip-link" href="#main">跳到主要内容</a>
 
-  <nav class="nav">
+  <nav class="nav" id="site-nav">
     <div class="nav__inner">
       <a class="nav__brand" href="index.html">熊英菲</a>
-      <ul class="nav__list">
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="打开菜单">
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+      </button>
+      <ul class="nav__list" id="nav-menu">
         <li><a href="#home">首页</a></li>
         <li><a href="#about">关于我</a></li>
         <li><a href="#works">我的作品</a></li>
@@ -115,6 +120,7 @@
     <p>© <span id="year">2026</span> 熊英菲 · 用 HTML 和 CSS 手写</p>
   </footer>
 
+  <script src="js/nav.js" defer></script>
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>

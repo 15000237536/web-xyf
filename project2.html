@@ -8,10 +8,15 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <nav class="nav">
+  <nav class="nav" id="site-nav">
     <div class="nav__inner">
       <a class="nav__brand" href="index.html">熊英菲</a>
-      <ul class="nav__list">
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="打开菜单">
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+      </button>
+      <ul class="nav__list" id="nav-menu">
         <li><a href="index.html#about">关于我</a></li>
         <li><a href="index.html#works">我的作品</a></li>
         <li><a href="index.html#contact">联系我</a></li>
@@ -78,6 +83,7 @@
   </footer>
 
   <script src="js/todo.js" defer></script>
+  <script src="js/nav.js" defer></script>
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
