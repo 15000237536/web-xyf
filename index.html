@@ -21,6 +21,7 @@
       <ul class="nav__list" id="nav-menu">
         <li><a href="#home">首页</a></li>
         <li><a href="#about">关于我</a></li>
+        <li><a href="#hobbies">爱好</a></li>
         <li><a href="#works">我的作品</a></li>
         <li><a href="#contact">联系我</a></li>
       </ul>
@@ -32,10 +33,15 @@
     <div class="landing__image" role="img" aria-label="拼贴风格头像插画"></div>
     <div class="landing__overlay"></div>
 
+    <!-- 珠帘开幕效果 -->
+    <div class="curtain" id="curtain" aria-hidden="true">
+      <div class="curtain__inner" id="curtain-inner"></div>
+    </div>
+
     <div class="landing__content">
-      <p class="landing__line landing__line--1">Sometimes you must question</p>
-      <p class="landing__line landing__line--2">semi-colon ;</p>
-      <p class="landing__line landing__line--3">love yourself</p>
+      <p class="landing__line landing__line--1">welcome</p>
+      <p class="landing__line landing__line--2">to my</p>
+      <p class="landing__line landing__line--3">channel</p>
 
       <a class="landing__enter" href="#home" aria-label="进入主页">
         <span class="landing__enter-ring"></span>
@@ -49,9 +55,15 @@
         <span class="landing__enter-text">进入</span>
       </a>
 
-      <p class="landing__hint">view the details, not in the piece</p>
+      <p class="landing__hint">scroll to explore</p>
     </div>
   </section>
+
+  <!-- 电视信号闪屏过渡 -->
+  <div class="tv-flash" id="tv-flash" aria-hidden="true">
+    <div class="tv-flash__scanlines"></div>
+    <div class="tv-flash__noise"></div>
+  </div>
 
   <!-- 欢迎页与主页之间的视觉分隔 -->
   <div class="landing-divider" aria-hidden="true"></div>
@@ -71,7 +83,9 @@
           <a class="btn btn--ghost" href="#contact">联系我</a>
         </div>
       </div>
-      <img class="hero__avatar" src="images/test2.jpg" alt="熊英菲的照片" width="220" height="220">
+      <div class="hero__avatar-wrap">
+        <img class="hero__avatar" src="images/test2.jpg" alt="熊英菲的照片" width="220" height="220">
+      </div>
     </header>
 
     <!-- 关于我 -->
@@ -79,8 +93,8 @@
       <h2 class="section__title">关于我</h2>
       <div class="about">
         <p>
-          我就读于数据科学专业，平时用 HTML 和 CSS 做一些小页面，
-          把学到的东西和喜欢的内容记录下来。
+          <span class="reveal-line">我就读于数据科学专业，平时用 HTML 和 CSS 做一些小页面，</span>
+          <span class="reveal-line">把学到的东西和喜欢的内容记录下来。</span>
         </p>
         <ul class="tags">
           <li>阅读</li>
@@ -92,22 +106,106 @@
       </div>
     </section>
 
-    <!-- 作品 -->
-    <section class="section" id="works">
-      <h2 class="section__title">我的作品</h2>
-      <div class="works">
-        <article class="card">
-          <p class="card__tag">网页练习</p>
-          <h3 class="card__title">个人主页</h3>
-          <p class="card__desc">记录我的兴趣和学习经历，用 HTML 组织内容、用 CSS 控制版式。</p>
-          <a class="card__link" href="project1.html">查看个人主页 →</a>
+    <!-- 爱好 -->
+    <section class="section section--hobbies" id="hobbies">
+      <h2 class="section__title">我的爱好</h2>
+      <div class="hobbies">
+        <article class="hobby-card">
+          <span class="hobby-card__icon hobby-card__icon--book" aria-hidden="true">
+            <svg class="book-svg" viewBox="0 0 48 48" aria-hidden="true">
+              <defs>
+                <linearGradient id="book-cover" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#f4d35e"/>
+                  <stop offset="100%" stop-color="#ff9a9e"/>
+                </linearGradient>
+              </defs>
+              <path class="book-page-left" d="M8 10c6 0 12 3 14 6V40c-6-3-12-5-14-5V10Z" fill="url(#book-cover)"/>
+              <path class="book-page-right" d="M40 10c-6 0-12 3-14 6V40c6-3 12-5 14-5V10Z" fill="#f8fafc"/>
+              <path d="M22 16c4-3 8-4 14-4M22 16c-4-3-8-4-14-4" stroke="#0b1d4b" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+              <line x1="22" y1="16" x2="22" y2="40" stroke="#0b1d4b" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <h3 class="hobby-card__title">阅读</h3>
+          <p class="hobby-card__desc">在文字里旅行，把喜欢的句子折成书签。</p>
         </article>
-        <article class="card">
-          <p class="card__tag">信息整理</p>
-          <h3 class="card__title">待办事项清单</h3>
-          <p class="card__desc">把群聊里的待办分类整理，帮同学看清截止时间、少赶一次 ddl。</p>
-          <a class="card__link" href="project2.html">查看项目作品 →</a>
+
+        <article class="hobby-card">
+          <span class="hobby-card__icon hobby-card__icon--disc" aria-hidden="true">
+            <svg class="disc-svg" viewBox="0 0 48 48" aria-hidden="true">
+              <defs>
+                <linearGradient id="disc-grad" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#06d6a0"/>
+                  <stop offset="100%" stop-color="#4cc9f0"/>
+                </linearGradient>
+              </defs>
+              <circle cx="24" cy="24" r="20" fill="url(#disc-grad)" opacity="0.9"/>
+              <circle cx="24" cy="24" r="16" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+              <circle cx="24" cy="24" r="10" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+              <circle cx="24" cy="24" r="3" fill="#0b1d4b"/>
+              <circle cx="24" cy="24" r="1.5" fill="#f8fafc"/>
+            </svg>
+          </span>
+          <h3 class="hobby-card__title">听音乐</h3>
+          <p class="hobby-card__desc">耳机是随身携带的避风港。</p>
         </article>
+
+        <article class="hobby-card">
+          <span class="hobby-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M24 4c-8 0-14 6-14 14 0 10 14 26 14 26s14-16 14-26c0-8-6-14-14-14Z"/>
+              <path d="M24 22a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"/>
+              <path d="M30 32c0-3-2.7-6-6-6s-6 3-6 6"/>
+            </svg>
+          </span>
+          <h3 class="hobby-card__title">心理学</h3>
+          <p class="hobby-card__desc">观察自己，也试图理解他人的情绪地图。</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 作品（下拉展开 Pinterest 风格） -->
+    <section class="section section--works" id="works">
+      <button class="works-toggle" type="button" aria-expanded="true" aria-controls="works-panel">
+        <span class="works-toggle__label">
+          <span class="section__title">我的作品</span>
+          <span class="works-toggle__hint">点击展开 / 收起</span>
+        </span>
+        <span class="works-toggle__chevron" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </span>
+      </button>
+
+      <div class="works-panel" id="works-panel">
+        <div class="works works--pinterest">
+          <article class="pin-card pin-card--tall">
+            <div class="pin-card__visual pin-card__visual--1" aria-hidden="true"></div>
+            <div class="pin-card__body">
+              <span class="pin-card__tag">网页练习</span>
+              <h3 class="pin-card__title">个人主页</h3>
+              <p class="pin-card__desc">记录我的兴趣和学习经历，用 HTML 组织内容、用 CSS 控制版式。</p>
+              <a class="pin-card__link" href="project1.html">
+                <span>查看个人主页</span>
+                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 10h10M13 7l3 3-3 3"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="pin-card">
+            <div class="pin-card__visual pin-card__visual--2" aria-hidden="true"></div>
+            <div class="pin-card__body">
+              <span class="pin-card__tag">信息整理</span>
+              <h3 class="pin-card__title">待办事项清单</h3>
+              <p class="pin-card__desc">把群聊里的待办分类整理，帮同学看清截止时间、少赶一次 ddl。</p>
+              <a class="pin-card__link" href="project2.html">
+                <span>查看项目作品</span>
+                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 10h10M13 7l3 3-3 3"/></svg>
+              </a>
+            </div>
+          </article>
+
+        </div>
       </div>
     </section>
 
