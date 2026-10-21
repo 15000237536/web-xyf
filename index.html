@@ -6,14 +6,54 @@
  <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
- <h1>你好，我是熊英菲</h1>
- <img src="images/test2.jpg">
- <h2>我感兴趣的事情</h2>
- <p>我是2026级数据科学专业学生。我喜欢阅读，听音乐。</p>
- <ul>
-   <li>心理学</li>
-   <li>认知科学</li>
- </ul>
- <a href="https://github.com">我的github</a>
+  <nav class="nav">
+    <a href="#home">首页</a>
+    <a href="#about">关于我</a>
+    <a href="#works">我的作品</a>
+    <a href="#contact">联系我</a>
+  </nav>
+  <main>
+    <header id="home">
+      <h1>你好，我是熊英菲</h1>
+    </header>
+    <section class="profile flex" id="about">
+      <div class="avatar">
+        <img src="images/test2.jpg">
+      </div>
+    </header>
+    <section>
+      <div>
+        <p>这是我的作品</p>
+      </div>
+    </section>
+<h2 id="works">我的作品</h2>
+<div class="works flex">
+  <div class="card">
+    <h3>个人主页</h3>
+    <p>记录我的兴趣和学习经历</p>
+    <a href="project1.html">查看个人主页</a>
+  </div>
+  <div class="card">
+    <h3>项目作品</h3>
+    <p>展示我的项目经验和技能</p>
+    <a href="project2.html">查看项目作品</a>
+  </div>
+</div>
+
+    <section class="details">
+      <h2>作品详情</h2>
+      <h3 id="project-1">个人主页</h3>
+      <p>用 HTML 组织个人爱好，用 CSS 设置颜色和布局。</p>
+      <h3 id="project-2">信息收集平台</h3>
+      <p>将微信群中的待办事项事项整理且分类 方便大学生赶ddl以及查阅资料</p>
+    </section>
+
+<section class="contact" id="contact">
+      <h2>联系我</h2>
+      <p>欢迎交流网页设计和学科专业知识。</p>
+      <p>邮箱：<a href="xiongyingfei@163.com">xiongyingfei@163.com</a></p>
+    </section>
+</section>
+</main>
 </body>
 </html>
