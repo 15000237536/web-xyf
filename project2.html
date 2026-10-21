@@ -1,25 +1,85 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <title>待办事项清单</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="待办事项清单 —— 把群聊里的待办整理分类，按截止时间提醒自己。">
+  <title>待办事项清单 | 熊英菲</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-    <h1>待办事项清单</h1>
-    <h2>[临期]</h2>
-    <p>填写《不购买回执单》</p >
-    <p>打印心理期末作业：500-1000字感悟心得
-    </p >
-    <p>提交时间：8.14</p >
+  <nav class="nav">
+    <div class="nav__inner">
+      <a class="nav__brand" href="index.html">熊英菲</a>
+      <ul class="nav__list">
+        <li><a href="index.html#about">关于我</a></li>
+        <li><a href="index.html#works">我的作品</a></li>
+        <li><a href="index.html#contact">联系我</a></li>
+      </ul>
     </div>
+  </nav>
 
-    <h2>[普通任务]</h2>
-    <p>准备综合英语pre</p >
-    <p>截止时间：11.13</p >
-    <h2>[资源整理】</h2>
-    <p>css学习网站
-        <a href=" https://xingyezn.github.io/web-lab/#/lesson/css-01" >练习css</a >
-    </p >
+  <main class="page">
+    <a class="back-link" href="index.html">← 返回主页</a>
+
+    <header class="page__header">
+      <p class="page__eyebrow">作品 02</p>
+      <h1>待办事项清单</h1>
+      <p>把群聊里散落的通知整理成清单：按紧急程度分类、按截止时间排序，完成一项划掉一项。</p>
+    </header>
+
+    <section class="section todo">
+      <!-- 新增任务 -->
+      <form class="todo__form" id="todo-form" autocomplete="off">
+        <label class="sr-only" for="todo-input">任务内容</label>
+        <input id="todo-input" name="title" type="text" placeholder="要做什么？例如：交心理作业" maxlength="80" required>
+
+        <label class="sr-only" for="todo-due">截止时间</label>
+        <input id="todo-due" name="due" type="date">
+
+        <label class="sr-only" for="todo-category">分类</label>
+        <select id="todo-category" name="category">
+          <option value="urgent">临期</option>
+          <option value="normal" selected>普通任务</option>
+          <option value="resource">资源整理</option>
+        </select>
+
+        <button class="btn btn--primary" type="submit">添加</button>
+      </form>
+
+      <!-- 筛选 -->
+      <div class="todo__toolbar">
+        <div class="filters" role="group" aria-label="按分类筛选">
+          <button class="filter is-active" type="button" data-filter="all">全部</button>
+          <button class="filter" type="button" data-filter="urgent">临期</button>
+          <button class="filter" type="button" data-filter="normal">普通任务</button>
+          <button class="filter" type="button" data-filter="resource">资源整理</button>
+        </div>
+        <p class="todo__stats" id="todo-stats" aria-live="polite"></p>
+      </div>
+
+      <!-- 列表 -->
+      <ul class="todo__list" id="todo-list"></ul>
+      <p class="todo__empty" id="todo-empty" hidden>这里还没有任务，先在上面添加一条吧。</p>
+    </section>
+
+    <section class="section">
+      <h2 class="section__title">说明</h2>
+      <ul class="plain-list">
+        <li>数据保存在浏览器的 localStorage 里，刷新页面不会丢，换设备不同步。</li>
+        <li>点击任务左侧的圆圈可以标记完成，点右侧的「删除」移除任务。</li>
+        <li>「临期」指 3 天内到期或有明确截止时间的任务。</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year">2026</span> 熊英菲 · <a href="index.html">回到主页</a></p>
+  </footer>
+
+  <script src="js/todo.js" defer></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

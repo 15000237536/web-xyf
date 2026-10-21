@@ -1,17 +1,71 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
- <meta charset="UTF-8">
- <title>我感兴趣的事情</title>
- <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="熊英菲感兴趣的事情：阅读、音乐、心理学与认知科学。">
+  <title>我感兴趣的事情 | 熊英菲</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<main>
-  <h2 style="color:#9955bb;">我感兴趣的事情</h2>
-  <p>我是2026级数据科学专业学生。我喜欢阅读，听音乐。</p >
-  <ul>
-    <li>心理学</li>
-    <li>认知科学</li>
-  </ul>
-</main>
+  <nav class="nav">
+    <div class="nav__inner">
+      <a class="nav__brand" href="index.html">熊英菲</a>
+      <ul class="nav__list">
+        <li><a href="index.html#about">关于我</a></li>
+        <li><a href="index.html#works">我的作品</a></li>
+        <li><a href="index.html#contact">联系我</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="page">
+    <a class="back-link" href="index.html">← 返回主页</a>
+
+    <header class="page__header">
+      <p class="page__eyebrow">作品 01</p>
+      <h1>我感兴趣的事情</h1>
+      <p>我是 2026 级数据科学专业的学生。除了专业课程，我把大部分好奇心花在这几件事上。</p>
+    </header>
+
+    <section class="section">
+      <h2 class="section__title">长期兴趣</h2>
+      <div class="interest-grid">
+        <article class="interest">
+          <h3>阅读</h3>
+          <p>偏爱非虚构与心理类书籍，习惯边读边记，把想法写进笔记。</p>
+        </article>
+        <article class="interest">
+          <h3>音乐</h3>
+          <p>写代码和写作业时的固定背景音，最近在整理自己的歌单分类。</p>
+        </article>
+        <article class="interest">
+          <h3>心理学</h3>
+          <p>关注人的情绪、动机与决策过程，想弄明白「为什么这样想」。</p>
+        </article>
+        <article class="interest">
+          <h3>认知科学</h3>
+          <p>对记忆、注意力与学习机制好奇，也在用这些结论改进自己的学习方法。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section__title">这个页面是怎么做的</h2>
+      <ul class="plain-list">
+        <li><strong>语义化结构：</strong>用 <code>header</code>、<code>section</code>、<code>article</code> 划分内容层级。</li>
+        <li><strong>统一变量：</strong>颜色、圆角、阴影都定义在 CSS 变量里，改一处即可换风格。</li>
+        <li><strong>响应式：</strong>网格布局在小屏自动变成单列，文字不会挤在一起。</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year">2026</span> 熊英菲 · <a href="index.html">回到主页</a></p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
+</html>
