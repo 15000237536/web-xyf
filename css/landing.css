@@ -1,0 +1,182 @@
+/* ===========================================================
+   拼贴风欢迎页 landing.css
+   =========================================================== */
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.landing {
+  background: #0b1d4b;
+  color: #f8fafc;
+  font-family: "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", system-ui, sans-serif;
+  overflow: hidden;
+}
+
+.landing__stage {
+  position: relative;
+  width: 100%;
+  height: 100dvh;
+  min-height: 600px;
+  display: grid;
+  place-items: center;
+}
+
+/* 背景图片 */
+.landing__image {
+  position: absolute;
+  inset: 0;
+  background: url("../images/landing-bg.jpg") center / cover no-repeat;
+  filter: saturate(1.05) contrast(1.05);
+  animation: kenburns 24s ease-in-out infinite alternate;
+}
+
+@keyframes kenburns {
+  from { transform: scale(1); }
+  to   { transform: scale(1.08); }
+}
+
+/* 渐变遮罩，让文字和按钮可读 */
+.landing__overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 50% 55%, rgba(11, 29, 75, 0.25) 0%, rgba(11, 29, 75, 0.55) 60%, rgba(11, 29, 75, 0.82) 100%);
+}
+
+.landing__content {
+  position: relative;
+  z-index: 2;
+  width: min(90%, 520px);
+  text-align: center;
+  padding: 28px 20px;
+}
+
+/* 手写感文字 */
+.landing__line {
+  margin: 0;
+  font-family: "KaiTi", "STKaiti", "Bradley Hand", "Comic Sans MS", cursive;
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.35);
+  line-height: 1.2;
+}
+
+.landing__line--1 {
+  font-size: clamp(20px, 4.2vw, 32px);
+  color: #f4d35e;
+  transform: rotate(-3deg);
+  margin-bottom: 6px;
+}
+
+.landing__line--2 {
+  font-size: clamp(26px, 5vw, 42px);
+  color: #ff6b6b;
+  transform: rotate(1.5deg);
+  margin-bottom: 18px;
+}
+
+.landing__line--3 {
+  font-size: clamp(18px, 3.4vw, 28px);
+  color: #06d6a0;
+  transform: rotate(-2deg);
+  margin-bottom: 42px;
+}
+
+/* 进入按钮：眼睛造型 */
+.landing__enter {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  color: #f8fafc;
+  text-decoration: none;
+  transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.landing__enter:hover {
+  transform: scale(1.1);
+}
+
+.landing__enter-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 3px solid #f4d35e;
+  animation: pulse-ring 2s ease-out infinite;
+}
+
+.landing__enter::before {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border-radius: 50%;
+  background: rgba(244, 211, 94, 0.12);
+  backdrop-filter: blur(2px);
+  border: 2px dashed rgba(255, 255, 255, 0.35);
+}
+
+@keyframes pulse-ring {
+  0%   { transform: scale(1);   opacity: 0.9; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+
+.landing__enter-eye {
+  position: relative;
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+}
+
+.landing__enter-eye svg {
+  width: 100%;
+  height: 100%;
+  color: currentColor;
+}
+
+.landing__enter-text {
+  position: absolute;
+  bottom: -26px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: #f8fafc;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+.landing__hint {
+  margin: 52px 0 0;
+  font-size: 14px;
+  color: rgba(248, 250, 252, 0.65);
+  font-family: "KaiTi", "STKaiti", cursive;
+  transform: rotate(-1deg);
+}
+
+/* 响应式 */
+@media (max-width: 520px) {
+  .landing__enter {
+    width: 92px;
+    height: 92px;
+  }
+  .landing__enter-eye {
+    width: 44px;
+    height: 44px;
+  }
+  .landing__line--2 {
+    margin-bottom: 26px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .landing__image { animation: none; }
+  .landing__enter-ring { animation: none; }
+  * { transition: none !important; }
+}
