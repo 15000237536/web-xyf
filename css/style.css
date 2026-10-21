@@ -20,6 +20,8 @@
   --shadow: 0 8px 24px rgba(28, 43, 58, 0.07);
   --nav-h: 64px;
   --container: 920px;
+  --yellow: #f4d35e;
+  --blue: #0b1d4b;
 }
 
 /* ---------- 2. 基础样式 ---------- */
@@ -812,3 +814,199 @@ code {
   .todo__form .btn { grid-column: 1 / -1; }
   .todo__toolbar { align-items: flex-start; }
 }
+
+/* ===========================================================
+   12. 欢迎页 Landing（首页顶部全屏插画）
+   =========================================================== */
+.landing {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  margin-top: calc(var(--nav-h) * -1);
+  padding: calc(var(--nav-h) + 24px) 24px 32px;
+  color: #f8fafc;
+  overflow: hidden;
+}
+
+.landing__image {
+  position: absolute;
+  inset: 0;
+  background: url("../images/landing-bg.jpg") center / cover no-repeat;
+  filter: saturate(1.05) contrast(1.05);
+  animation: kenburns 24s ease-in-out infinite alternate;
+}
+
+@keyframes kenburns {
+  from { transform: scale(1); }
+  to   { transform: scale(1.08); }
+}
+
+.landing__overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 50% 55%, rgba(11, 29, 75, 0.25) 0%, rgba(11, 29, 75, 0.55) 60%, rgba(11, 29, 75, 0.82) 100%);
+}
+
+.landing__content {
+  position: relative;
+  z-index: 2;
+  width: min(90%, 520px);
+  text-align: center;
+}
+
+.landing__line {
+  margin: 0;
+  font-family: "KaiTi", "STKaiti", "Bradley Hand", "Comic Sans MS", cursive;
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.35);
+  line-height: 1.2;
+}
+
+.landing__line--1 {
+  font-size: clamp(20px, 4.2vw, 32px);
+  color: #f4d35e;
+  transform: rotate(-3deg);
+  margin-bottom: 6px;
+}
+
+.landing__line--2 {
+  font-size: clamp(26px, 5vw, 42px);
+  color: #ff6b6b;
+  transform: rotate(1.5deg);
+  margin-bottom: 18px;
+}
+
+.landing__line--3 {
+  font-size: clamp(18px, 3.4vw, 28px);
+  color: #06d6a0;
+  transform: rotate(-2deg);
+  margin-bottom: 42px;
+}
+
+.landing__enter {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  color: #f8fafc;
+  text-decoration: none;
+  transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.landing__enter:hover { transform: scale(1.1); }
+
+.landing__enter-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 3px solid #f4d35e;
+  animation: pulse-ring 2s ease-out infinite;
+}
+
+.landing__enter::before {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border-radius: 50%;
+  background: rgba(244, 211, 94, 0.12);
+  backdrop-filter: blur(2px);
+  border: 2px dashed rgba(255, 255, 255, 0.35);
+}
+
+@keyframes pulse-ring {
+  0%   { transform: scale(1);   opacity: 0.9; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+
+.landing__enter-eye {
+  position: relative;
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+}
+
+.landing__enter-eye svg {
+  width: 100%;
+  height: 100%;
+  color: currentColor;
+}
+
+.landing__enter-text {
+  position: absolute;
+  bottom: -26px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: #f8fafc;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+.landing__hint {
+  margin: 52px 0 0;
+  font-size: 14px;
+  color: rgba(248, 250, 252, 0.65);
+  font-family: "KaiTi", "STKaiti", cursive;
+  transform: rotate(-1deg);
+}
+
+@media (max-width: 520px) {
+  .landing__enter { width: 92px; height: 92px; }
+  .landing__enter-eye { width: 44px; height: 44px; }
+  .landing__line--2 { margin-bottom: 26px; }
+}
+
+/* ===========================================================
+   13. 导航深色模式（仅在欢迎页顶部使用）
+   =========================================================== */
+.nav.is-dark {
+  background: rgba(11, 29, 75, 0.55);
+  border-bottom-color: rgba(244, 211, 94, 0.45);
+}
+
+.nav.is-dark.is-scrolled {
+  background: rgba(11, 29, 75, 0.92);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35);
+}
+
+.nav.is-dark .nav__brand {
+  color: var(--yellow);
+  border-color: var(--yellow);
+}
+
+.nav.is-dark .nav__brand:hover {
+  background: var(--yellow);
+  color: var(--blue);
+}
+
+.nav.is-dark .nav__list a { color: rgba(248, 250, 252, 0.85); }
+.nav.is-dark .nav__list a:hover { color: #fff; background: rgba(255, 255, 255, 0.1); }
+.nav.is-dark .nav__list a.is-active { color: var(--yellow); }
+
+.nav.is-dark .nav__toggle {
+  border-color: var(--yellow);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.nav.is-dark .nav__toggle:hover { background: rgba(244, 211, 94, 0.18); }
+.nav.is-dark .nav__toggle-bar { background: var(--yellow); }
+
+@media (max-width: 760px) {
+  .nav.is-dark .nav__list {
+    background: rgba(11, 29, 75, 0.98);
+    border-bottom-color: rgba(244, 211, 94, 0.45);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .landing__image { animation: none; }
+  .landing__enter-ring { animation: none; }
+}
+

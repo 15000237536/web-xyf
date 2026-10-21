@@ -17,8 +17,13 @@
   var menuLinks = nav.querySelectorAll('.nav__list a');
 
   /* 1. 滚动后加投影 */
+  var landing = document.querySelector('.landing');
   function onScroll() {
     nav.classList.toggle('is-scrolled', window.scrollY > 8);
+    if (landing) {
+      var threshold = landing.offsetHeight - nav.offsetHeight;
+      nav.classList.toggle('is-dark', window.scrollY < threshold);
+    }
   }
   onScroll();
   window.addEventListener('scroll', onScroll, { passive: true });
