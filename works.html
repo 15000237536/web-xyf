@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="我的作品 —— 个人主页与待办事项清单。">
+  <title>我的作品 | 熊英菲</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page--works">
+  <a class="skip-link" href="#main">跳到主要内容</a>
+
+  <!-- 页面转场 -->
+  <div class="page-transition" id="page-transition" aria-hidden="true">
+    <div class="page-transition__strips">
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <p class="page-transition__label">我的作品</p>
+  </div>
+
+  <!-- 唯美场景背景 -->
+  <div class="scene" aria-hidden="true">
+    <span class="scene__grid"></span>
+    <span class="scene__glow"></span>
+    <span class="scene__dust"></span>
+    <span class="scene__orb scene__orb--a"></span>
+    <span class="scene__orb scene__orb--b"></span>
+    <span class="scene__orb scene__orb--c"></span>
+  </div>
+
+  <nav class="nav is-dark" id="site-nav">
+    <div class="nav__inner">
+      <a class="nav__brand" href="index.html" data-transition-label="首页">熊英菲</a>
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="打开菜单">
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+      </button>
+      <ul class="nav__list" id="nav-menu">
+        <li><a href="index.html" data-transition-label="首页">首页</a></li>
+        <li><a href="about.html" data-transition-label="关于我">关于我</a></li>
+        <li><a href="hobbies.html" data-transition-label="我的爱好">爱好</a></li>
+        <li><a class="is-active" href="works.html" data-transition-label="我的作品">我的作品</a></li>
+        <li><a href="index.html#contact" data-transition-label="联系我">联系我</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="page" id="main">
+    <a class="back-link" href="index.html" data-transition-label="首页">回到首页</a>
+
+    <header class="page__header">
+      <p class="page__eyebrow">03 · WORKS</p>
+      <h1 data-split>我的作品</h1>
+    </header>
+
+    <!-- 作品（下拉展开 Pinterest 风格） -->
+    <section class="section section--works" id="works">
+      <button class="works-toggle" type="button" aria-expanded="true" aria-controls="works-panel">
+        <span class="works-toggle__label">
+          <span class="section__title">我的作品</span>
+          <span class="works-toggle__hint">点击展开 / 收起</span>
+        </span>
+        <span class="works-toggle__chevron" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </span>
+      </button>
+
+      <div class="works-panel" id="works-panel">
+        <div class="works works--pinterest">
+          <article class="pin-card pin-card--tall">
+            <div class="pin-card__visual pin-card__visual--1" aria-hidden="true"></div>
+            <div class="pin-card__body">
+              <span class="pin-card__tag">网页练习</span>
+              <h3 class="pin-card__title">个人主页</h3>
+              <p class="pin-card__desc">记录我的兴趣和学习经历，用 HTML 组织内容、用 CSS 控制版式。</p>
+              <a class="pin-card__link" href="project1.html">
+                <span>查看个人主页</span>
+                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 10h10M13 7l3 3-3 3"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="pin-card">
+            <div class="pin-card__visual pin-card__visual--2" aria-hidden="true"></div>
+            <div class="pin-card__body">
+              <span class="pin-card__tag">信息整理</span>
+              <h3 class="pin-card__title">待办事项清单</h3>
+              <p class="pin-card__desc">把群聊里的待办分类整理，帮同学看清截止时间、少赶一次 ddl。</p>
+              <a class="pin-card__link" href="project2.html">
+                <span>查看项目作品</span>
+                <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 10h10M13 7l3 3-3 3"/></svg>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 作品详情 -->
+    <section class="section" id="details">
+      <h2 class="section__title">作品详情</h2>
+      <div class="details">
+        <article class="detail" id="project-1">
+          <h3>个人主页</h3>
+          <p>用 HTML 组织个人爱好，用 CSS 设置颜色和布局，练习语义化标签与响应式排版。</p>
+          <p class="detail__meta">技术：HTML5 / CSS3</p>
+        </article>
+        <article class="detail" id="project-2">
+          <h3>信息收集平台</h3>
+          <p>
+            把微信群里的待办事项整理并分类，方便大学生赶 ddl 以及查阅资料。
+            目前已完成第一版的清单页面，后续会补充筛选与提醒。
+          </p>
+          <p class="detail__meta">技术：HTML5 / CSS3（规划中：JavaScript）</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 页面之间的导航 -->
+    <nav class="pager" aria-label="页面之间导航">
+      <a class="pager__side pager__side--prev" href="hobbies.html" data-transition-label="我的爱好">
+        <span class="pager__label">上一站</span>
+        <span class="pager__name">我的爱好</span>
+      </a>
+
+      <ol class="pager__dots">
+        <li><a class="pager__dot" href="about.html" title="关于我" aria-label="关于我"></a></li>
+        <li><a class="pager__dot" href="hobbies.html" title="我的爱好" aria-label="我的爱好"></a></li>
+        <li><a class="pager__dot is-current" href="works.html" aria-current="page" title="我的作品" aria-label="我的作品"></a></li>
+      </ol>
+
+      <a class="pager__side pager__side--next" href="about.html" data-transition-label="关于我">
+        <span class="pager__label">下一站</span>
+        <span class="pager__name">关于我</span>
+      </a>
+    </nav>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year">2026</span> 熊英菲 · 用 HTML 和 CSS 手写</p>
+    <p class="footer__mail">邮箱：<a href="mailto:xiongyingfei@163.com">xiongyingfei@163.com</a></p>
+  </footer>
+
+  <script src="js/nav.js" defer></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

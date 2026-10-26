@@ -7,25 +7,47 @@
   <title>待办事项清单 | 熊英菲</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-  <nav class="nav" id="site-nav">
+<body class="page--works">
+  <a class="skip-link" href="#main">跳到主要内容</a>
+
+  <!-- 页面转场 -->
+  <div class="page-transition" id="page-transition" aria-hidden="true">
+    <div class="page-transition__strips">
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <p class="page-transition__label">待办事项清单</p>
+  </div>
+
+  <!-- 唯美场景背景 -->
+  <div class="scene" aria-hidden="true">
+    <span class="scene__grid"></span>
+    <span class="scene__glow"></span>
+    <span class="scene__dust"></span>
+    <span class="scene__orb scene__orb--a"></span>
+    <span class="scene__orb scene__orb--b"></span>
+    <span class="scene__orb scene__orb--c"></span>
+  </div>
+
+  <nav class="nav is-dark" id="site-nav">
     <div class="nav__inner">
-      <a class="nav__brand" href="index.html">熊英菲</a>
+      <a class="nav__brand" href="index.html" data-transition-label="首页">熊英菲</a>
       <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="打开菜单">
         <span class="nav__toggle-bar"></span>
         <span class="nav__toggle-bar"></span>
         <span class="nav__toggle-bar"></span>
       </button>
       <ul class="nav__list" id="nav-menu">
-        <li><a href="index.html#about">关于我</a></li>
-        <li><a href="index.html#works">我的作品</a></li>
-        <li><a href="index.html#contact">联系我</a></li>
+        <li><a href="index.html" data-transition-label="首页">首页</a></li>
+        <li><a href="about.html" data-transition-label="关于我">关于我</a></li>
+        <li><a href="hobbies.html" data-transition-label="我的爱好">爱好</a></li>
+        <li><a class="is-active" href="works.html" data-transition-label="我的作品">我的作品</a></li>
+        <li><a href="index.html#contact" data-transition-label="联系我">联系我</a></li>
       </ul>
     </div>
   </nav>
 
-  <main class="page">
-    <a class="back-link" href="index.html">← 返回主页</a>
+  <main class="page" id="main">
+    <a class="back-link" href="works.html" data-transition-label="我的作品">← 返回我的作品</a>
 
     <header class="page__header">
       <p class="page__eyebrow">作品 02</p>
@@ -79,7 +101,7 @@
   </main>
 
   <footer class="footer">
-    <p>© <span id="year">2026</span> 熊英菲 · <a href="index.html">回到主页</a></p>
+    <p>© <span id="year">2026</span> 熊英菲 · <a href="index.html" data-transition-label="首页">回到主页</a></p>
   </footer>
 
   <script src="js/todo.js" defer></script>

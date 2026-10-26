@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="关于我 —— 熊英菲，数据科学专业，用 HTML 和 CSS 记录学到的东西。">
+  <title>关于我 | 熊英菲</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page--about">
+  <a class="skip-link" href="#main">跳到主要内容</a>
+
+  <!-- 页面转场 -->
+  <div class="page-transition" id="page-transition" aria-hidden="true">
+    <div class="page-transition__strips">
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <p class="page-transition__label">关于我</p>
+  </div>
+
+  <!-- 唯美场景背景 -->
+  <div class="scene" aria-hidden="true">
+    <span class="scene__grid"></span>
+    <span class="scene__glow"></span>
+    <span class="scene__dust"></span>
+    <span class="scene__orb scene__orb--a"></span>
+    <span class="scene__orb scene__orb--b"></span>
+    <span class="scene__orb scene__orb--c"></span>
+  </div>
+
+  <nav class="nav is-dark" id="site-nav">
+    <div class="nav__inner">
+      <a class="nav__brand" href="index.html" data-transition-label="首页">熊英菲</a>
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="打开菜单">
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+      </button>
+      <ul class="nav__list" id="nav-menu">
+        <li><a href="index.html" data-transition-label="首页">首页</a></li>
+        <li><a class="is-active" href="about.html" data-transition-label="关于我">关于我</a></li>
+        <li><a href="hobbies.html" data-transition-label="我的爱好">爱好</a></li>
+        <li><a href="works.html" data-transition-label="我的作品">我的作品</a></li>
+        <li><a href="index.html#contact" data-transition-label="联系我">联系我</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="page" id="main">
+    <a class="back-link" href="index.html" data-transition-label="首页">回到首页</a>
+
+    <header class="page__header">
+      <p class="page__eyebrow">01 · ABOUT</p>
+      <h1 data-split>关于我</h1>
+    </header>
+
+    <section class="section" id="about">
+      <h2 class="section__title">关于我</h2>
+      <div class="about">
+        <div class="about-grid">
+          <div class="portrait">
+            <img class="portrait__img" src="images/test2.jpg" alt="熊英菲的照片" width="200" height="200">
+          </div>
+
+          <div>
+            <p>
+              <span class="reveal-line">我就读于数据科学专业，平时用 HTML 和 CSS 做一些小页面，</span>
+              <span class="reveal-line">把学到的东西和喜欢的内容记录下来。</span>
+            </p>
+            <ul class="tags">
+              <li>阅读</li>
+              <li>音乐</li>
+              <li>心理学</li>
+              <li>认知科学</li>
+              <li>数据科学</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 页面之间的导航 -->
+    <nav class="pager" aria-label="页面之间导航">
+      <a class="pager__side pager__side--prev" href="works.html" data-transition-label="我的作品">
+        <span class="pager__label">上一站</span>
+        <span class="pager__name">我的作品</span>
+      </a>
+
+      <ol class="pager__dots">
+        <li><a class="pager__dot is-current" href="about.html" aria-current="page" title="关于我" aria-label="关于我"></a></li>
+        <li><a class="pager__dot" href="hobbies.html" title="我的爱好" aria-label="我的爱好"></a></li>
+        <li><a class="pager__dot" href="works.html" title="我的作品" aria-label="我的作品"></a></li>
+      </ol>
+
+      <a class="pager__side pager__side--next" href="hobbies.html" data-transition-label="我的爱好">
+        <span class="pager__label">下一站</span>
+        <span class="pager__name">我的爱好</span>
+      </a>
+    </nav>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year">2026</span> 熊英菲 · 用 HTML 和 CSS 手写</p>
+    <p class="footer__mail">邮箱：<a href="mailto:xiongyingfei@163.com">xiongyingfei@163.com</a></p>
+  </footer>
+
+  <script src="js/nav.js" defer></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
