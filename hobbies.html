@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="我的爱好 —— 阅读、听音乐、心理学。">
+  <title>我的爱好 | 熊英菲</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page--hobbies">
+  <a class="skip-link" href="#main">跳到主要内容</a>
+
+  <!-- 页面转场 -->
+  <div class="page-transition" id="page-transition" aria-hidden="true">
+    <div class="page-transition__strips">
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <p class="page-transition__label">我的爱好</p>
+  </div>
+
+  <!-- 唯美场景背景 -->
+  <div class="scene" aria-hidden="true">
+    <span class="scene__grid"></span>
+    <span class="scene__glow"></span>
+    <span class="scene__dust"></span>
+    <span class="scene__orb scene__orb--a"></span>
+    <span class="scene__orb scene__orb--b"></span>
+    <span class="scene__orb scene__orb--c"></span>
+  </div>
+
+  <nav class="nav is-dark" id="site-nav">
+    <div class="nav__inner">
+      <a class="nav__brand" href="index.html" data-transition-label="首页">熊英菲</a>
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="打开菜单">
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+      </button>
+      <ul class="nav__list" id="nav-menu">
+        <li><a href="index.html" data-transition-label="首页">首页</a></li>
+        <li><a href="about.html" data-transition-label="关于我">关于我</a></li>
+        <li><a class="is-active" href="hobbies.html" data-transition-label="我的爱好">爱好</a></li>
+        <li><a href="works.html" data-transition-label="我的作品">我的作品</a></li>
+        <li><a href="index.html#contact" data-transition-label="联系我">联系我</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="page" id="main">
+    <a class="back-link" href="index.html" data-transition-label="首页">回到首页</a>
+
+    <header class="page__header">
+      <p class="page__eyebrow">02 · HOBBIES</p>
+      <h1 data-split>我的爱好</h1>
+    </header>
+
+    <section class="section section--hobbies" id="hobbies">
+      <h2 class="section__title">我的爱好</h2>
+      <div class="hobbies">
+        <article class="hobby-card" data-accent="#f4d35e">
+          <span class="hobby-card__icon hobby-card__icon--book" aria-hidden="true">
+            <svg class="book-svg" viewBox="0 0 48 48" aria-hidden="true">
+              <defs>
+                <linearGradient id="book-cover" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#f4d35e"/>
+                  <stop offset="100%" stop-color="#ff9a9e"/>
+                </linearGradient>
+              </defs>
+              <path class="book-page-left" d="M8 10c6 0 12 3 14 6V40c-6-3-12-5-14-5V10Z" fill="url(#book-cover)"/>
+              <path class="book-page-right" d="M40 10c-6 0-12 3-14 6V40c6-3 12-5 14-5V10Z" fill="#f8fafc"/>
+              <path d="M22 16c4-3 8-4 14-4M22 16c-4-3-8-4-14-4" stroke="#0b1d4b" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+              <line x1="22" y1="16" x2="22" y2="40" stroke="#0b1d4b" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <h3 class="hobby-card__title">阅读</h3>
+          <p class="hobby-card__desc">在文字里旅行，把喜欢的句子折成书签。</p>
+        </article>
+
+        <article class="hobby-card" data-accent="#4cc9f0">
+          <span class="hobby-card__icon hobby-card__icon--disc" aria-hidden="true">
+            <svg class="disc-svg" viewBox="0 0 48 48" aria-hidden="true">
+              <defs>
+                <linearGradient id="disc-grad" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#06d6a0"/>
+                  <stop offset="100%" stop-color="#4cc9f0"/>
+                </linearGradient>
+              </defs>
+              <circle cx="24" cy="24" r="20" fill="url(#disc-grad)" opacity="0.9"/>
+              <circle cx="24" cy="24" r="16" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+              <circle cx="24" cy="24" r="10" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+              <circle cx="24" cy="24" r="3" fill="#0b1d4b"/>
+              <circle cx="24" cy="24" r="1.5" fill="#f8fafc"/>
+            </svg>
+          </span>
+          <h3 class="hobby-card__title">听音乐</h3>
+          <p class="hobby-card__desc">耳机是随身携带的避风港。</p>
+        </article>
+
+        <article class="hobby-card" data-accent="#ff85a1">
+          <span class="hobby-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M24 4c-8 0-14 6-14 14 0 10 14 26 14 26s14-16 14-26c0-8-6-14-14-14Z"/>
+              <path d="M24 22a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"/>
+              <path d="M30 32c0-3-2.7-6-6-6s-6 3-6 6"/>
+            </svg>
+          </span>
+          <h3 class="hobby-card__title">心理学</h3>
+          <p class="hobby-card__desc">观察自己，也试图理解他人的情绪地图。</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 页面之间的导航 -->
+    <nav class="pager" aria-label="页面之间导航">
+      <a class="pager__side pager__side--prev" href="about.html" data-transition-label="关于我">
+        <span class="pager__label">上一站</span>
+        <span class="pager__name">关于我</span>
+      </a>
+
+      <ol class="pager__dots">
+        <li><a class="pager__dot" href="about.html" title="关于我" aria-label="关于我"></a></li>
+        <li><a class="pager__dot is-current" href="hobbies.html" aria-current="page" title="我的爱好" aria-label="我的爱好"></a></li>
+        <li><a class="pager__dot" href="works.html" title="我的作品" aria-label="我的作品"></a></li>
+      </ol>
+
+      <a class="pager__side pager__side--next" href="works.html" data-transition-label="我的作品">
+        <span class="pager__label">下一站</span>
+        <span class="pager__name">我的作品</span>
+      </a>
+    </nav>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year">2026</span> 熊英菲 · 用 HTML 和 CSS 手写</p>
+    <p class="footer__mail">邮箱：<a href="mailto:xiongyingfei@163.com">xiongyingfei@163.com</a></p>
+  </footer>
+
+  <script src="js/nav.js" defer></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
